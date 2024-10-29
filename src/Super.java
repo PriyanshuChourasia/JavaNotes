@@ -23,10 +23,28 @@ class HariStory extends Book{
 }
 
 
+
+// If a method is overridden in the subclass, you can use super.methodname() to call the version in the superclass
+
+class Person{
+    void walk(){
+        System.out.println("A person can walk 10000 km");
+    }
+}
+
+class Priyanshu extends Person{
+    @Override
+    void walk(){
+        System.out.println("Priyanshu can walk more than 1000 km ");
+    }
+}
+
+
 public class Super {
     public static void main(String[] args){
-        HariStory hariStory = new HariStory();
-        System.out.println(hariStory.getBookName());
-//        System.out.println("")
+        Priyanshu priyanshu = new Priyanshu();
+        Person person = new Priyanshu();
+        priyanshu.walk();
+        person.walk();
     }
 }
