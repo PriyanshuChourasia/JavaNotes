@@ -31,11 +31,35 @@ class Bird extends Animal{
 }
 
 class Cat extends Animal{
+    @Override
     public void sound(){
         System.out.println("Cat does meow");
     }
 }
 
+
+/***
+ * Overloading: Overloading feature is a feature which allows a class to have more than one method with the same name but different parameters. It is just like constructor
+ * It increases readability of the program
+ */
+
+
+class  Calc{
+//    This is the first method to add two integers
+    public int add(int a,int b){
+        return a+b;
+    }
+
+//    Overloaded method to add three integers
+    public int add(int a,int b,int c){
+        return a+b+c;
+    }
+
+//    Overloaded method to add two double values
+    public double add(double a,double b){
+        return a+b;
+    }
+}
 
 
 
@@ -47,6 +71,16 @@ public class TopicPolymorphism {
 //        animal.sound();
 //        cat.sound();
 
+        Calc  calculator = new Calc();
+
+//        Calling add method with two integers
+        System.out.println("Two parameter method are : "+ calculator.add(4,5));
+
+//        Calling add method with three parameter
+        System.out.println("Three parameter method are : "+ calculator.add(4,5,6));
+
+//        Calling add method with two double parameter
+        System.out.println("Double parameter method are: "+ calculator.add(5.66,67.44));
 
     }
 }
