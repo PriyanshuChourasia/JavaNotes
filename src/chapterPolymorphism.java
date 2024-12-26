@@ -8,7 +8,6 @@
  *          so since the employee is a type of employee and the object is itself defined as Rupesh class so employee reference can access functions
  *          which is defined in superclass or the methods which are overridden in subclass this reference cannot access any extra methods from its derived class
  *          which is it's subclass
- *
  * Rupesh rupesh = new Rupesh();
  *          rupesh is both reference type and object type of Rupesh. This reference of type Rupesh,so it can access all methods and field defined in
  *          the Rupesh class including those inherited from the Employee class. So this subclass can access all methods of its superclass as it have extended it
@@ -48,6 +47,7 @@ public class chapterPolymorphism {
         Rupesh rupesh = new Rupesh();
         rupesh.meet();
         Employee employee = new Rupesh();
+        rupesh.meet();
         employee.work();
 //        employee.greet();  cannot  access subclass methods as the reference type is of Superclass and this superclass have not extended to any
     }
